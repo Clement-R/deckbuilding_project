@@ -1,16 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerResourcesManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Text debugGoldText;
+
+    private int _gold;
+
+	public void AddGold(int amount)
+    {
+        _gold += amount;
+        debugGoldText.text = _gold.ToString();
+    }
 }
