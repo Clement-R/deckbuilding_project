@@ -9,8 +9,9 @@ public class DropZone : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("Hello card");
-        Destroy(eventData.selectedObject.gameObject);
+        // TODO : Trigger card effect
+
+        Destroy(eventData.pointerDrag);
         playerResources.AddGold(10);
     }
 }
