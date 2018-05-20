@@ -5,13 +5,11 @@ using UnityEngine.EventSystems;
 
 public class DropZone : MonoBehaviour, IDropHandler
 {
-    public PlayerResourcesManager playerResources;
-
     public void OnDrop(PointerEventData eventData)
     {
         // TODO : Trigger card effect
 
         Destroy(eventData.pointerDrag);
-        playerResources.AddGold(10);
+        eventData.pointerDrag.GetComponent<Card>().PlayEffect();
     }
 }
