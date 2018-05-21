@@ -7,6 +7,8 @@ public class GameOrchestrator : MonoBehaviour {
 	private List<Player> _players;
 	private Player _activePlayer;
 
+	private Queue<Card> graveyard = new Queue<Card>();
+
 	private void StartPlayerTurn(Player player)
 	{
 		// TODO

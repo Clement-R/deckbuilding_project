@@ -5,6 +5,7 @@ using UnityEngine;
 public class Card : MonoBehaviour {
 
     public PlayerResourcesManager playerResources;
+    public int uid;
 
     // TODO :
     // Events :
