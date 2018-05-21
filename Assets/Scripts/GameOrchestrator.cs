@@ -7,7 +7,12 @@ public class GameOrchestrator : MonoBehaviour {
 	private List<Player> _players;
 	private Player _activePlayer;
 
-	private Queue<Card> graveyard = new Queue<Card>();
+	private Stack<Card> graveyard = new Stack<Card>();
+
+	public void SendCardToGraveyard(Card card)
+	{
+		graveyard.Push(card);
+	}
 
 	private void StartPlayerTurn(Player player)
 	{

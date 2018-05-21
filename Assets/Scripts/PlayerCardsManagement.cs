@@ -12,8 +12,7 @@ public class PlayerCardsManagement : MonoBehaviour {
     public GameObject deckObject;
     public GameObject card;
 
-    // Use a Queue instead for deck
-    private Queue<Card> deck = new Queue<Card>();
+    private Stack<Card> deck = new Stack<Card>();
     private List<Card> discard;
 
     void Update ()
@@ -27,6 +26,11 @@ public class PlayerCardsManagement : MonoBehaviour {
         }
 	}
 
+    private void SendCardToDeck(Card card)
+    {
+        deck.Push(card);
+    }
+
     private void Draw()
     {
         // Check if there is enough a card to draw, if not shuffle discard pile into deck
@@ -37,7 +41,7 @@ public class PlayerCardsManagement : MonoBehaviour {
         }
         else
         {
-            // TODO : Move this call to an orchestrator who should do thats
+            // TODO : Move this call to an orchestrator who should do that
             Instantiate(card, deckObject.transform);
         }
     }
@@ -49,7 +53,7 @@ public class PlayerCardsManagement : MonoBehaviour {
 
     private void SendCardToDiscardPile(Card card)
     {
-        // TODO : Remove from deck
+        // TODO : Remove from deck using card's uid
         discard.Add(card);
     }
 }

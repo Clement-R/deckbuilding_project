@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerResources: {fileID: 0}
+  uid: 0
 --- !u!222 &222496823052026056
 CanvasRenderer:
   m_ObjectHideFlags: 1

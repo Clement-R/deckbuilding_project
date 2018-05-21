@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// TODO ; change this class to abstract
 public class Card : MonoBehaviour {
 
     public PlayerResourcesManager playerResources;

@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-	private bool _canPlay = true;
+	public bool CanPlay { get { return _canPlay; } }
 
-	void Start ()
-	{
-		
-	}
-	
-	void Update ()
-	{
-		
-	}
+	private bool _canPlay = true;
+	private PlayerCardsManagement cardsManager;
 }
