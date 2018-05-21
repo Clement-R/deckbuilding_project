@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+	private bool _canPlay = true;
+
+	void Start ()
+	{
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		
 	}
 }
