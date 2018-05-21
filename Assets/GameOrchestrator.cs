@@ -6,7 +6,7 @@ public class GameOrchestrator : MonoBehaviour {
 
 	void Start ()
     {
-		
+				
 	}
 	
 	void Update ()
@@ -17,5 +17,10 @@ public class GameOrchestrator : MonoBehaviour {
     private void EndTurn()
     {
         // TODO
+    }
+
+    private Player GetNextPlayer()
+    {
+
     }
 }

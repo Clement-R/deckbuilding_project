@@ -1,0 +1,17 @@
+deck management (draw, shuffle discard pile when empty)
+player turn management
+card effect
+card color combo
+multiple effects on a card
+getting a card from the discard pile to the deck
+getting a card from the deck to the cimetery
+adding a card to the discard pile
+resources management (gold, attack, health)
+
+game orchestrator with scriptable object rules to allow multiple
+game modes, including multiple players
+
+custom starting deck
+custom deck
+boosters opening
+
