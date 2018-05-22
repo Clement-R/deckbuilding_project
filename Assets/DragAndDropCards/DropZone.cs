@@ -7,9 +7,8 @@ public class DropZone : MonoBehaviour, IDropHandler
 {
     public void OnDrop(PointerEventData eventData)
     {
-        // TODO : Trigger card effect
-
+        // Trigger card effect
+        eventData.pointerDrag.GetComponent<Card>().OnPlayed();
         Destroy(eventData.pointerDrag);
-        eventData.pointerDrag.GetComponent<Card>().PlayEffect();
     }
 }

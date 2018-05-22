@@ -2,27 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// TODO ; change this class to abstract
-public class Card : MonoBehaviour {
-
-    public PlayerResourcesManager playerResources;
+public abstract class Card
+{
     public int uid;
 
-    // TODO :
-    // Events :
-    // 	OnDrawed()
-    //  OnPlayed()
-    //  OnSacrificed()
-    //  // OnDiscarded()
+    protected PlayerResourcesManager _playerResources;
 
-    private void Start()
+    public Card(PlayerResourcesManager playerResources)
     {
-    	// TODO : Use the game orchestrator to avoid direct binding
-        playerResources = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerResourcesManager>();
+        _playerResources = playerResources;
     }
 
-    public void PlayEffect()
-    {
-        playerResources.AddGold(10);
-    }
+    public abstract void OnDrawed();
+    public abstract void OnPlayed();
+    public abstract void OnSacrificed();
 }
