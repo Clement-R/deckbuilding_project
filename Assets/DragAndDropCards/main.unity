@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311926, g: 0.38073996, b: 0.35872692, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -310,10 +310,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 484833875}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2817007205dc73498eb0b9bc62dcbfc, type: 3}
+  m_Script: {fileID: 11500000, guid: f7154b8d2b74a594188260fee6c291e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerResources: {fileID: 1023469959}
+  uid: 0
+  amount: 10
 --- !u!1001 &493574764
 Prefab:
   m_ObjectHideFlags: 0
@@ -416,9 +417,28 @@ Prefab:
       propertyPath: playerResources
       value: 
       objectReference: {fileID: 1023469959}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114892487266303992, guid: bacf8602083a63047bc2db8746a3cf88, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: bacf8602083a63047bc2db8746a3cf88, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &493574765 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1280980356672560, guid: bacf8602083a63047bc2db8746a3cf88,
+    type: 2}
+  m_PrefabInternal: {fileID: 493574764}
+--- !u!114 &493574766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 493574765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7154b8d2b74a594188260fee6c291e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uid: 0
+  amount: 5
 --- !u!1 &529869176
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,10 +813,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 808587890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2817007205dc73498eb0b9bc62dcbfc, type: 3}
+  m_Script: {fileID: 11500000, guid: f7154b8d2b74a594188260fee6c291e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerResources: {fileID: 1023469959}
+  uid: 0
+  amount: 10
 --- !u!1 &848165555
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,7 +968,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4180c5870844363418e62bcde033fe1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deck: {fileID: 529869176}
+  numberOfCardsInHand: 5
+  deckObject: {fileID: 529869176}
   card: {fileID: 1280980356672560, guid: bacf8602083a63047bc2db8746a3cf88, type: 2}
 --- !u!1 &1840723221
 GameObject:
@@ -1038,10 +1060,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1840723221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2817007205dc73498eb0b9bc62dcbfc, type: 3}
+  m_Script: {fileID: 11500000, guid: f7154b8d2b74a594188260fee6c291e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerResources: {fileID: 1023469959}
+  uid: 0
+  amount: 10
 --- !u!1 &1944174306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1234,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2104244861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2817007205dc73498eb0b9bc62dcbfc, type: 3}
+  m_Script: {fileID: 11500000, guid: f7154b8d2b74a594188260fee6c291e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerResources: {fileID: 1023469959}
+  uid: 0
+  amount: 10

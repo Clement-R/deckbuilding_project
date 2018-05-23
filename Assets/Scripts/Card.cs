@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Card
+public abstract class Card : MonoBehaviour
 {
+    [HideInInspector]
     public int uid;
 
     protected PlayerResourcesManager _playerResources;
+
+    private void Start()
+    {
+        _playerResources = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerResourcesManager>();
+    }
 
     public Card(PlayerResourcesManager playerResources)
     {

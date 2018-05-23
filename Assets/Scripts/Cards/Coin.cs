@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Coin : Card
 {
+    public int amount = 10;
+
     public Coin(PlayerResourcesManager playerResources) : base(playerResources)
     {
     }
@@ -14,7 +16,7 @@ public class Coin : Card
 
     public override void OnPlayed()
     {
-        _playerResources.AddGold(10);
+        _playerResources.AddGold(amount);
     }
 
     public override void OnSacrificed()
