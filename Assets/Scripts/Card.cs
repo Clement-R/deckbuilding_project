@@ -8,10 +8,12 @@ public abstract class Card : MonoBehaviour
     public int uid;
 
     protected PlayerResourcesManager _playerResources;
+    protected PlayerCardsManagement _playerCards;
 
     private void Start()
     {
         _playerResources = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerResourcesManager>();
+        _playerCards = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCardsManagement>();
     }
 
     public Card(PlayerResourcesManager playerResources)

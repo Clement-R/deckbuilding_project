@@ -24,6 +24,11 @@ public class PlayerCardsManagement : MonoBehaviour {
                 Draw();
             }
         }
+
+        for (int i = 0; i < 25; i++)
+        {
+            deck.Push(new Coin(GetComponent<PlayerResourcesManager>()));
+        }
 	}
 
     private void SendCardToDeck(Card card)
@@ -31,7 +36,7 @@ public class PlayerCardsManagement : MonoBehaviour {
         deck.Push(card);
     }
 
-    private void Draw()
+    public void Draw()
     {
         // Check if there is enough a card to draw, if not shuffle discard pile into deck
         if(deck.Count == 0)
