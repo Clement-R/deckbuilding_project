@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerCardsManagement : MonoBehaviour {
@@ -53,7 +54,7 @@ public class PlayerCardsManagement : MonoBehaviour {
 
     private void ShuffleDiscardPile()
     {
-        // TODO
+        discard = discard.OrderBy(x => Random.value).ToList();
     }
 
     private void SendCardToDiscardPile(Card card)
