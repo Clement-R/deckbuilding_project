@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class GameOrchestrator : MonoBehaviour {
 
-	private List<Player> _players;
-	private Player _activePlayer;
+    private List<Player> _players;
+    private Player _activePlayer;
 
-	private Stack<Card> graveyard = new Stack<Card>();
+    private Stack<Card> graveyard = new Stack<Card>();
 
-	public void SendCardToGraveyard(Card card)
-	{
-		graveyard.Push(card);
-	}
+    public void SendCardToGraveyard(Card card)
+    {
+      graveyard.Push(card);
+    }
 
-	private void StartPlayerTurn(Player player)
-	{
-		// TODO
-	}
+    private void StartPlayerTurn(Player player)
+    {
+      // TODO
+    }
 
-    private void EndTurn()
+    public void EndTurn()
     {
         // TODO
         if(CheckForVictory(_activePlayer))
